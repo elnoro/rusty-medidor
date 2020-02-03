@@ -1,0 +1,21 @@
+version: '3.4'
+services: 
+  app:
+    image: rust:1.40
+    env_file: .medidor.env
+    entrypoint: ["tail", "-f", "/dev/null"]
+    volumes: 
+      - ./:/medidor
+  db:
+    image: mysql
+    env_file: .medidor.env
+    ports:
+      - 3306:3306
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025
+      - 8025:8025
+
+volumes:
+  db-volume:

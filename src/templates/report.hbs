@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Business metrics, {{now}}</title>
+  </head>
+  <body>
+    <table>
+        {{#each metric_values as |mv| ~}}
+        <tr>
+            <td>{{mv.metric_name}}</td>
+            <td>{{mv.value}}</td>
+        </tr>
+        {{/each}}
+    </table>
+  </body>
+</html>
