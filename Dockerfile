@@ -10,5 +10,6 @@ FROM debian:buster-slim
 WORKDIR /medidor
 COPY --from=builder /medidor .
 RUN mv target/release/medidor .
+# FIXME install openssl 
 
 CMD [ "medidor" ]
