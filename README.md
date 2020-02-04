@@ -1,11 +1,11 @@
-*Medidor* is a project to collect business metrics on legacy projects.
+**Medidor** is a project to collect business metrics on legacy projects.
 
 Limitations: currently only MySQL is supported.
 
 How to build:
 
 Without docker: 
-1. [Install Rust](https://www.rust-lang.org/tools/install
+1. [Install Rust](https://www.rust-lang.org/tools/install)
 2. `cargo build`
 
 With docker:
